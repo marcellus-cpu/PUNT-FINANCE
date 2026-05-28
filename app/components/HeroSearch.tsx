@@ -17,7 +17,8 @@
 
 "use client";
 
-import { useActionState, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useFormState as useActionState } from "react-dom";
 import { Search, X, AlertCircle, Clock }               from "lucide-react";
 import { translateTerm }                               from "@/app/actions/translateTerm";
 import { ResultCard }                                  from "@/app/components/ResultCard";
