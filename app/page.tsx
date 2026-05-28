@@ -312,6 +312,120 @@ function HeroSection() {
 /* ════════════════════════════════════════════════════════════════════════════
    COMPONENT — Library Section
    ════════════════════════════════════════════════════════════════════════════ */
+
+
+
+
+
+
+
+
+
+
+function BookCard({ book }: { book: BookItem }) {
+  return (
+    <article
+      className="book-card"
+      aria-label={`${book.title} by ${book.author} — Level: ${book.level}`}
+    >
+      <div
+        style={{
+          backgroundColor: "var(--color-oxford)",
+          height: "14rem",
+          position: "relative",
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          padding: "1.5rem",
+        }}
+        aria-hidden="true"
+      >
+        <div style={{ height: "1px", backgroundColor: "var(--color-brass)", marginBottom: "0.75rem", width: "2rem" }} />
+        <p
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "0.9375rem",
+            fontStyle: "italic",
+            color: "rgba(250,249,246,0.85)",
+            lineHeight: 1.3,
+          }}
+        >
+          {book.title}
+        </p>
+        <p
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: "0.625rem",
+            color: "rgba(250,249,246,0.45)",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            marginTop: "0.5rem",
+          }}
+        >
+          {book.author} · {book.year}
+        </p>
+      </div>
+      <div style={{ padding: "1.5rem" }}>
+        <div className="flex items-center gap-2 mb-3">
+          <span
+            className="badge-level"
+            style={{ color: book.levelColor, borderColor: book.levelColor }}
+            aria-label={`Difficulty: ${book.level} (${book.levelEn})`}
+          >
+            {book.level}
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.625rem",
+              color: "var(--color-muted)",
+              letterSpacing: "0.06em",
+            }}
+          >
+            {book.levelEn}
+          </span>
+        </div>
+        <hr className="rule mb-3" aria-hidden="true" />
+        <p
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: "0.8125rem",
+            color: "var(--color-slate)",
+            lineHeight: 1.75,
+            marginBottom: "1.25rem",
+          }}
+        >
+          {book.description}
+        </p>
+        <div className="flex items-center justify-between">
+          <p
+            style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.5625rem",
+              color: "var(--color-muted)",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+            }}
+          >
+            ISBN: {book.isbn}
+          </p>
+          
+            href={`https://openlibrary.org/isbn/${book.isbn}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-brass"
+            style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", letterSpacing: "0.08em" }}
+          >
+            <span className="flex items-center gap-1">
+              Find a Copy
+            </span>
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
 function LibrarySection({ books }: { books: BookItem[] }) {
   return (
     <section
