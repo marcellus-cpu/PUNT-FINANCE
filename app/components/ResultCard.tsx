@@ -190,7 +190,7 @@ export function ResultCard({ result }: ResultCardProps) {
               fontSize:     "0.875rem",
               fontStyle:    "italic",
               color:        "var(--color-slate)",
-              fontFamily:   "var(--font-serif)",
+            
             }}
           >
             {result.term}
