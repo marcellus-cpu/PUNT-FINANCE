@@ -16,7 +16,7 @@
  *   Call `revalidateTag("daily-ledger")` from a Route Handler or
  *   Vercel cron job to force a fresh fetch ahead of schedule.
  *   Example cron (vercel.json):
- *     { "crons": [{ "path": "/api/revalidate-ledger", "schedule": "0 */6 * * *" }] }
+ *     { "crons": [{ "path": "/api/revalidate-ledger", "schedule": "0 *\/6 * * *" }] }
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
