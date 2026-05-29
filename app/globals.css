@@ -153,3 +153,10 @@ a { text-decoration: none; color: inherit; }
   white-space: nowrap;
   border-width: 0;
 }
+.subscribe-btn {
+  color: #FAF9F6;
+  background-color: #002147;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid #002147;
+  text-decoration: none;
+}
