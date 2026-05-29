@@ -1,4 +1,5 @@
 
+import React from "react";
 import type { Metadata } from "next";
 import { ArrowUpRight, BookOpen, Globe, ChevronRight } from "lucide-react";
 import { HeroSearch } from "@/app/components/HeroSearch";
@@ -94,12 +95,15 @@ function GlobalHeader() {
       href="/subscribe"
   className="hidden sm:inline-flex items-center gap-1.5 label-fin"
   style={{
-    color: "#FAF9F6",
-    backgroundColor: "#002147",
+    textDecoration: "none",
     padding: "0.45rem 1.1rem",
     border: "1px solid #002147",
-    textDecoration: "none",
-  }}
+    background: "#002147",
+    fontSize: "0.625rem",
+    fontWeight: 600,
+    letterSpacing: "0.16em",
+    textTransform: "uppercase" as const,
+  } as React.CSSProperties}
 >
   Subscribe <ChevronRight size={9} strokeWidth={2.5} />
 </a>
