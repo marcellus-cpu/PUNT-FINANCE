@@ -81,11 +81,12 @@ export async function getCachedTerm(normalised: string): Promise<FinancialTerm |
 
   if (data) {
     // Non-blocking search_count increment — fire and forget
-    db.from("financial_terms")
-      .update({ search_count: (data.search_count ?? 0) + 1 })
-      .eq("id", data.id)
-      .then(() => {})
-.catch((e: unknown) => console.warn("[PuntFinance/DB] search_count update:", e instanceof Error ? e.message : String(e)));
+    void db.from("financial_terms")
+  .update({ search_count: (data.search_count ?? 0) + 1 })
+  .eq("id", data.id)
+  .then(undefined, (e: unknown) => {
+    console.warn("[PuntFinance/DB] search_count update:", String(e));
+  });
   }
 
   return data as FinancialTerm | null;
