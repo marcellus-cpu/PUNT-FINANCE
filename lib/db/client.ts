@@ -84,8 +84,8 @@ export async function getCachedTerm(normalised: string): Promise<FinancialTerm |
     db.from("financial_terms")
       .update({ search_count: (data.search_count ?? 0) + 1 })
       .eq("id", data.id)
-      .then(() => {}) // Intentional no-await
-      .catch((e: Error) => console.warn("[PuntFinance/DB] search_count update:", e.message));
+      .then(() => {})
+.catch((e: unknown) => console.warn("[PuntFinance/DB] search_count update:", e instanceof Error ? e.message : String(e)));
   }
 
   return data as FinancialTerm | null;
