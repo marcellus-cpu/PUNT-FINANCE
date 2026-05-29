@@ -91,12 +91,18 @@ function GlobalHeader() {
             ))}
           </ul>
           
-            href="/subscribe"
-            className="hidden sm:inline-flex items-center gap-1.5 label-fin"
-            style={{ color: "var(--color-cream)", backgroundColor: "var(--color-oxford)", padding: "0.45rem 1.1rem", border: "1px solid var(--color-oxford)" }}
-          >
-            Subscribe <ChevronRight size={9} strokeWidth={2.5} />
-          </a>
+      href="/subscribe"
+  className="hidden sm:inline-flex items-center gap-1.5 label-fin"
+  style={{
+    color: "var(--color-cream)" as string,
+    backgroundColor: "var(--color-oxford)" as string,
+    padding: "0.45rem 1.1rem",
+    border: "1px solid var(--color-oxford)" as string,
+    textDecoration: "none",
+  }}
+>
+  Subscribe <ChevronRight size={9} strokeWidth={2.5} />
+</a>
         </nav>
       </div>
     </header>
