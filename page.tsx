@@ -91,7 +91,7 @@ function GlobalHeader() {
               </li>
             ))}
           </ul>
-         href="/subscribe"
+         <a href="/subscribe"
   className="hidden sm:inline-flex items-center gap-1.5 label-fin subscribe-btn"
 >
   Subscribe <ChevronRight size={9} strokeWidth={2.5} />
