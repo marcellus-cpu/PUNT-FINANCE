@@ -91,19 +91,8 @@ function GlobalHeader() {
               </li>
             ))}
           </ul>
-          
-      href="/subscribe"
-  className="hidden sm:inline-flex items-center gap-1.5 label-fin"
-  style={{
-    textDecoration: "none",
-    padding: "0.45rem 1.1rem",
-    border: "1px solid #002147",
-    background: "#002147",
-    fontSize: "0.625rem",
-    fontWeight: 600,
-    letterSpacing: "0.16em",
-    textTransform: "uppercase" as const,
-  } as React.CSSProperties}
+         href="/subscribe"
+  className="hidden sm:inline-flex items-center gap-1.5 label-fin subscribe-btn"
 >
   Subscribe <ChevronRight size={9} strokeWidth={2.5} />
 </a>
