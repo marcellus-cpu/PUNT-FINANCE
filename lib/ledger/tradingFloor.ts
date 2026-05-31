@@ -122,3 +122,21 @@ const STATIC_FALLBACK: RegionData[] = [
     label: "Latin America",
     shortLabel: "Latin America",
     fetchedAt
+],
+  },
+];
+
+async function _fetchTradingFloor(): Promise<TradingFloorResult> {
+  return {
+    ok: true,
+    regions: STATIC_FALLBACK,
+    fetchedAt: new Date().toISOString(),
+    isFallback: true,
+  };
+}
+
+export const fetchTradingFloor = unstable_cache(
+  _fetchTradingFloor,
+  ["trading-floor-global"],
+  { revalidate: REVALIDATE, tags: ["trading-floor"] }
+);
