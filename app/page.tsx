@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight, BookOpen, Globe, ChevronRight } from "lucide-react";
 import { HeroSearch } from "@/app/components/HeroSearch";
 import { DailyLedger } from "@/app/components/DailyLedger";
+import { TradingFloor } from "@/app/components/TradingFloorWrapper";
 
 export const metadata: Metadata = {
   title: "Punt Finance — High Finance, Simplified in Swahili",
@@ -216,8 +217,9 @@ export default function HomePage() {
       <GlobalHeader />
       <main id="main-content" role="main">
         <HeroSection />
-        <DailyLedger />
-        <LibrarySection books={PLACEHOLDER_BOOKS} />
+       <DailyLedger />
+<TradingFloor />
+<LibrarySection books={PLACEHOLDER_BOOKS} /> 
       </main>
       <SiteFooter />
     </>
