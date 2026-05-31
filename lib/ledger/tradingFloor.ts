@@ -121,8 +121,18 @@ const STATIC_FALLBACK: RegionData[] = [
     region: "latin_america",
     label: "Latin America",
     shortLabel: "Latin America",
-    fetchedAt
-],
+    fetchedAt: new Date().toISOString(),
+    headline: "Brazilian Bovespa hits 3-month high; Argentina markets volatile amid IMF negotiations",
+    headlineUrl: "https://www.b3.com.br",
+    source: "B3 Brazil / Reuters",
+    indices: [
+      { symbol:"IBOV", name:"Bovespa Index", country:"Brazil", countryFlag:"🇧🇷", price:"128,420.00", change:"+840.00", changePct:"+0.66%", direction:"up", currency:"BRL", lastUpdated:"Indicative" },
+      { symbol:"MERVAL", name:"MERVAL Index", country:"Argentina", countryFlag:"🇦🇷", price:"1,542,000", change:"+8,200", changePct:"+0.53%", direction:"up", currency:"ARS", lastUpdated:"Indicative" },
+      { symbol:"COLCAP", name:"COLCAP Index", country:"Colombia", countryFlag:"🇨🇴", price:"1,342.40", change:"-6.20", changePct:"-0.46%", direction:"down", currency:"COP", lastUpdated:"Indicative" },
+      { symbol:"SPBL25P", name:"S&P BVL Peru Gen", country:"Peru", countryFlag:"🇵🇪", price:"20,420.00", change:"+142.00", changePct:"+0.70%", direction:"up", currency:"PEN", lastUpdated:"Indicative" },
+      { symbol:"IPSA", name:"S&P/CLX IPSA", country:"Chile", countryFlag:"🇨🇱", price:"6,420.00", change:"+28.40", changePct:"+0.44%", direction:"up", currency:"CLP", lastUpdated:"Indicative" },
+    ],
+  },
   },
 ];
 
